@@ -363,12 +363,12 @@ avengers.forEach((element,i) => console.log(element,i))
 //print only key value
 obj = {name:'ranjith kumar',age:24}
 for(let x in obj){
-    console.log(x)
+    console.log(x);
 }
 
 //print only pair value
 for(let x in obj){
-    console.log(obj[x])
+    console.log(obj[x]);
 }
 
 //for in loop for array -- print index value
@@ -380,7 +380,7 @@ for(let x in avengers){
 
 // for of loop -- for of loop works only who have sympol.property file
 for(let i of avengers){
-    console.log(i)
+    console.log(i);
 }
 
 //Passing by value vs Passing by reference
@@ -407,4 +407,115 @@ function updateValue(a){
     updateValue(obj);
     console.log(obj);
 
-    */
+    
+//String functions (split, concat, trim, etc)
+a='hello'
+console.log(a.length);
+
+//string -- concat -- it support variable length argument(it means this is support n number of argument)
+a = "welcome";
+a.concat("hiii");
+console.log(a);
+a.concat("hiiii","hello");
+console.log(a);
+a.concat("hiiii","hello","welcome");
+
+//string -- charAt -- find the index of charactor
+ a="hello world";
+ b= a.charAt(7);
+ console.log(b);
+
+ //string -- split -- split the word (or) charactor
+//split -- word by word
+a = "all are welcome"
+b = a.split(' ');
+console.log(b);
+
+//split -- charactor by charactor
+a = "all are welcome"
+c = a.split(''); //without space
+console.log(c);
+
+//string -- touppercase,tolowercase
+a = "hello world";
+b = a.toUpperCase();
+console.log(b);
+c = a.toLowerCase();
+console.log(c); 
+
+//string -- trim -- trim front and back space 
+a ="           hello world          ";
+b = a.trim()
+console.log(b);
+
+//string -- replace -- replace the word or charactor
+
+a ="hello world";
+b = a.replace("hello","hii");
+console.log(b);  
+
+//string -- replace -- this is used for replace the word ,this word is either uppercase or lowercase(ignore case)
+a = "HeLLo world";
+b = a.replace(/hello/i,"hiii"); // i means ignore case
+console.log(b);
+
+//string -- substring -- particularly split and get the word
+
+a ="hello word";
+b = a.substr(5);//from
+c = a.substr(5,4)//from,length
+console.log(b);
+console.log(c); 
+
+//string -- indexof -- find the word index value
+
+a ="hello word word";
+b = a.indexOf("word")//searchstring
+c = a.indexOf("word" ,10);//searchstring,position
+d =a.lastIndexOf("word");
+console.log(b);
+console.log(c);
+console.log(d);
+
+
+//Template String and String Interpolation 
+let namee = 'ranjith kumar';
+let place = 'karaikudi';
+
+console.log("name :" + namee);
+console.log("place :" + place); // to print this format is very defficult. so , we have to template string
+
+//template String -- which format you declare that format we can easily print
+let text = `name : <name>
+place : <place>`; //``--backtick
+console.log(text); 
+
+//String Interpolation -- we can easily write js code on template string
+let namee = "ranjith kumar";
+let place = "chennai";
+
+let text =`
+name : ${namee}
+place :${place}
+`;
+console.log(text);
+*/
+
+//Regular Expression -- pattern and flags
+
+"hello world".replace(/hello/igm,"hi"); // i -- ignorecase,g-global,m-multiline
+//a = 'welcome'; -- /welcome/igm
+//a = 'welcome weldome' -- /wel[cd]ome/igm -- either c or d 
+//a ='welcome weleome wel9ome' -- /wel[a-zA-Z0-9]ome/igm -- inbetween a-z,A-Z
+// a ='wel9ome' -- /wel[/d]ome/igm --/d means digit -- we can identity the numbers easily
+// / /s /ig -- /s -- space
+// a= 'welcome welcoome welcoooome welcme' -- / welco+me/ig / -- one or more
+// a= 'welcome welcoome welcoooome welcme' -- / welco*me/ig / -- zero or more
+// a= 'welcome welcoome welcoooome welcme' -- / welco?me/ig / -- zero or one
+// a= 'welcome welcoome welcoooome welcme' -- / welco{2,3}me/ig / -- minimun to maximum 
+// a= 'welcome welcoome welcoooome welcme' -- / welco.me/ig / -- any charactor in dot
+// a= 'welcome welcoome welcoooome welcme' -- / $me/ig / -- find the ending
+
+
+
+
