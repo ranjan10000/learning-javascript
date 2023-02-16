@@ -301,7 +301,110 @@ console.log(grade);
 const marks =[35,45,55,65,75];
 const pass = marks.filter(e => e>= 45)
 console.log(pass);
-console.log(marks); */
+console.log(marks); 
 
+//reduce -- it is used for abbreviate the function
 
+const marks = [10,20,30,40,50];
 
+const sum = marks.reduce((acc,e) =>{
+return acc + e;
+},0);
+console.log(sum)   
+
+//--(or)--
+
+const marks = [10,20,30,40,50];
+const sum = marks.reduce((acc,e)=> acc+e,0);
+console.log(sum);
+
+//--Rest and spread operator in array
+//Spread
+let avengers = ['iron man','captain america','thor'];
+let updatedAvenger = [...avengers,'hulk'];
+let updatedAvenger1 =['hulk',...avengers];
+console.log(updatedAvenger1)
+console.log(updatedAvenger);
+//Rest
+let [hulk,iron,...rest] = updatedAvenger;
+console.log(updatedAvenger);
+console.log(iron)
+console.log(hulk)
+console.log(rest)
+
+//--Rest and spread operator in object  
+//spread
+let obj ={
+    name:'ranjith kumar',
+    age : 24
+}
+
+obj1 ={
+    ...obj,
+    work : 'software engineer'
+}
+
+console.log(obj1);
+
+//Rest
+let {work,age,...dummy}=obj1;
+console.log(dummy);   
+
+//foreach,for in ,for of loops
+//foreach loop -- only for array
+avengers=['iron man','captain america'];
+
+avengers.forEach((element) => console.log(element))
+//foreach loop also print index values
+avengers.forEach((element,i) => console.log(element,i)) 
+
+//for in loop  for object--
+
+//print only key value
+obj = {name:'ranjith kumar',age:24}
+for(let x in obj){
+    console.log(x)
+}
+
+//print only pair value
+for(let x in obj){
+    console.log(obj[x])
+}
+
+//for in loop for array -- print index value
+let avengers = ['iron man','captain america','thor'];
+
+for(let x in avengers){
+    console.log(x);
+}
+
+// for of loop -- for of loop works only who have sympol.property file
+for(let i of avengers){
+    console.log(i)
+}
+
+//Passing by value vs Passing by reference
+//passing by value -- passing only values not memory address so we can't change the original values
+function updateValue(a){
+a++;
+}
+let x=10;
+console.log(x);
+updateValue(x);
+console.log(x);  
+
+//Passing by reference -- we can change the original values because passing memory address,it affected the original value
+function updateValue(a){
+    a.age=24;
+    }
+    
+    obj = {
+        name:'ranjith kumar',
+        age : 20
+    }
+    
+    console.log(obj);
+    updateValue(obj);
+    console.log(obj);
+
+    */
