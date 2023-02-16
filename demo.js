@@ -499,7 +499,6 @@ name : ${namee}
 place :${place}
 `;
 console.log(text);
-*/
 
 //Regular Expression -- pattern and flags
 
@@ -515,6 +514,11 @@ console.log(text);
 // a= 'welcome welcoome welcoooome welcme' -- / welco{2,3}me/ig / -- minimun to maximum 
 // a= 'welcome welcoome welcoooome welcme' -- / welco.me/ig / -- any charactor in dot
 // a= 'welcome welcoome welcoooome welcme' -- / $me/ig / -- find the ending
+*/
+
+//email validation using regular expression
+
+/[a-z0-9]{1,20}@[a-z0-9]{1,10}\.[a-z]{2,}/ig
 
 
 
