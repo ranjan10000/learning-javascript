@@ -514,12 +514,42 @@ console.log(text);
 // a= 'welcome welcoome welcoooome welcme' -- / welco{2,3}me/ig / -- minimun to maximum 
 // a= 'welcome welcoome welcoooome welcme' -- / welco.me/ig / -- any charactor in dot
 // a= 'welcome welcoome welcoooome welcme' -- / $me/ig / -- find the ending
-*/
+
 
 //email validation using regular expression
 
 /[a-z0-9]{1,20}@[a-z0-9]{1,10}\.[a-z]{2,}/ig
 
 
+
+//Math and Date Objects
+
+//Math.abs(1) -- give positive value
+//Math.pow(2,3) -- 2 power 3 = 8
+//Math.sqrt(4) -- square root
+//Math.ceil(4.1) --> 5 
+//Math.floor(4.9) --> 4
+//Math.round(4.1) --> 4
+//Math.min(23,34,-1) --> -1
+//Math.max(23,34) --> 34
+
+//date in js
+//d --> date object(get current date and time)
+//d.getFullYear() --> current year
+//d.getDate() --> current date
+//d.getMonth() --> current month --> month start from 0 so,d.getMonth()+1
+//d.getTime() --> start from jan and time get in m/s
+*/
+//customize date object
+myday = new Date('2023-02-14')
+t = myday.getTime();
+console.log(t);
+
+myday.setTime(1676332800000);
+console.log(myday);
+
+
+
+ 
 
 
