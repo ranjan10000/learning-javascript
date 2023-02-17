@@ -539,7 +539,7 @@ console.log(text);
 //d.getDate() --> current date
 //d.getMonth() --> current month --> month start from 0 so,d.getMonth()+1
 //d.getTime() --> start from jan and time get in m/s
-*/
+
 //customize date object
 myday = new Date('2023-02-14')
 t = myday.getTime();
@@ -548,8 +548,7 @@ console.log(t);
 myday.setTime(1676332800000);
 console.log(myday);
 
+*/
 
-
- 
 
 
