@@ -27,14 +27,24 @@ para.classList.add("red", "console") // add css class
 para.classList.remove("red"); //remove css class
 para.classList // find the css class
 
-*/
+
 //DOM - Event Listening
 document.getElementById('p1').addEventListener('click',function(e) {
     console.log(e.target.innerText);
 })
 
-
-
-
+//DOM - Event Bubbling -- parent child propagation
+document.getElementById('btn').addEventListener('click',function(e){
+    console.log("btn click");
+})
+document.getElementById('container').addEventListener('click',function(e){
+    console.log("container click");
+})
+To avoid event bubbling
+document.getElementById('btn').addEventListener('click',function(e){
+    e.stopPropagation();
+    console.log("btn click");
+})
+*/
 
 
